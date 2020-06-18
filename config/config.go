@@ -1,8 +1,9 @@
 package config
 
 import (
-	"github.com/datastax/cassandra-data-apis/log"
 	"time"
+
+	"github.com/riptano/cassandra-data-apis/log"
 )
 
 type Config interface {

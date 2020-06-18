@@ -3,10 +3,11 @@ package graphql
 import (
 	"context"
 	"errors"
-	"github.com/datastax/cassandra-data-apis/log"
-	"github.com/graphql-go/graphql"
 	"sync"
 	"time"
+
+	"github.com/graphql-go/graphql"
+	"github.com/riptano/cassandra-data-apis/log"
 )
 
 type SchemaUpdater struct {

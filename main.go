@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/datastax/cassandra-data-apis/cmd"
+	"github.com/riptano/cassandra-data-apis/cmd"
 )
 
 func main() {

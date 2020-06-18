@@ -1,12 +1,13 @@
 package endpoint
 
 import (
-	"github.com/datastax/cassandra-data-apis/config"
-	"github.com/datastax/cassandra-data-apis/db"
-	"github.com/datastax/cassandra-data-apis/graphql"
-	"github.com/datastax/cassandra-data-apis/log"
-	"go.uber.org/zap"
 	"time"
+
+	"github.com/riptano/cassandra-data-apis/config"
+	"github.com/riptano/cassandra-data-apis/db"
+	"github.com/riptano/cassandra-data-apis/graphql"
+	"github.com/riptano/cassandra-data-apis/log"
+	"go.uber.org/zap"
 )
 
 const DefaultSchemaUpdateDuration = 10 * time.Second

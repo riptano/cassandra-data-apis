@@ -4,15 +4,16 @@ package db
 
 import (
 	"fmt"
-	"github.com/datastax/cassandra-data-apis/internal/testutil"
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/gomega"
-	"github.com/stretchr/testify/assert"
-	"gopkg.in/inf.v0"
 	"math/big"
 	"reflect"
 	"strings"
 	"time"
+
+	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/gomega"
+	"github.com/riptano/cassandra-data-apis/internal/testutil"
+	"github.com/stretchr/testify/assert"
+	"gopkg.in/inf.v0"
 )
 
 var _ = Describe("Session", func() {

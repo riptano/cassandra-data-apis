@@ -2,11 +2,12 @@ package graphql
 
 import (
 	"fmt"
-	"github.com/datastax/cassandra-data-apis/config"
-	"github.com/datastax/cassandra-data-apis/db"
-	"github.com/datastax/cassandra-data-apis/types"
+
 	"github.com/gocql/gocql"
 	"github.com/graphql-go/graphql"
+	"github.com/riptano/cassandra-data-apis/config"
+	"github.com/riptano/cassandra-data-apis/db"
+	"github.com/riptano/cassandra-data-apis/types"
 )
 
 const (

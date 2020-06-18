@@ -2,12 +2,13 @@ package graphql
 
 import (
 	"fmt"
-	"github.com/datastax/cassandra-data-apis/config"
-	"github.com/datastax/cassandra-data-apis/db"
-	"github.com/gocql/gocql"
-	"github.com/graphql-go/graphql"
 	"strconv"
 	"strings"
+
+	"github.com/gocql/gocql"
+	"github.com/graphql-go/graphql"
+	"github.com/riptano/cassandra-data-apis/config"
+	"github.com/riptano/cassandra-data-apis/db"
 )
 
 type dataCenterValue struct {
@@ -339,7 +340,7 @@ func (sg *SchemaGenerator) buildKeyspaceMutation(singleKeyspace string, ops conf
 func (sg *SchemaGenerator) checkKeyspace(singleKeyspace string, p graphql.ResolveParams,
 	op func(params graphql.ResolveParams) (i interface{}, err error)) (i interface{}, err error) {
 	ksName := p.Args["keyspaceName"].(string)
-	if  sg.isKeyspaceExcludedOrNotSingle(ksName, singleKeyspace){
+	if sg.isKeyspaceExcludedOrNotSingle(ksName, singleKeyspace) {
 		return nil, fmt.Errorf("keyspace does not exist '%s'", ksName)
 	}
 	return op(p)

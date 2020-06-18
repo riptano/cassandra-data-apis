@@ -2,9 +2,6 @@ package testutil
 
 import (
 	"fmt"
-	"github.com/datastax/cassandra-data-apis/log"
-	"github.com/gocql/gocql"
-	"go.uber.org/zap"
 	"os"
 	"os/exec"
 	"path"
@@ -12,6 +9,10 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/gocql/gocql"
+	"github.com/riptano/cassandra-data-apis/log"
+	"go.uber.org/zap"
 )
 
 var started = false

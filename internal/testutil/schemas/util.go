@@ -4,14 +4,15 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/datastax/cassandra-data-apis/graphql"
-	"github.com/datastax/cassandra-data-apis/internal/testutil"
-	"github.com/gocql/gocql"
-	"github.com/iancoleman/strcase"
-	. "github.com/onsi/gomega"
 	"net/http"
 	"net/http/httptest"
 	"path"
+
+	"github.com/gocql/gocql"
+	"github.com/iancoleman/strcase"
+	. "github.com/onsi/gomega"
+	"github.com/riptano/cassandra-data-apis/graphql"
+	"github.com/riptano/cassandra-data-apis/internal/testutil"
 )
 
 type ResponseBody struct {

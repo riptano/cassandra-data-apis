@@ -1,9 +1,10 @@
 package db
 
 import (
-	"github.com/datastax/cassandra-data-apis/config"
-	"github.com/gocql/gocql"
 	"time"
+
+	"github.com/gocql/gocql"
+	"github.com/riptano/cassandra-data-apis/config"
 )
 
 func ifNotExistsStr(ifNotExists bool) string {

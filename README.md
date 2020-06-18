@@ -228,7 +228,7 @@ DATA_API_HOSTS=127.0.0.1 DATA_API_KEYSPACE=store ./run.exe --config <your_config
 #### Installation
 
 ```
-go get github.com/datastax/cassandra-data-apis
+go get github.com/riptano/cassandra-data-apis
 ```
 
 #### Using the API

@@ -3,9 +3,10 @@ package rest
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/datastax/cassandra-data-apis/db"
-	"github.com/julienschmidt/httprouter"
 	"net/http"
+
+	"github.com/julienschmidt/httprouter"
+	"github.com/riptano/cassandra-data-apis/db"
 )
 
 // jsonResult provides a basic root object in order to avoid using a scalar at root level.

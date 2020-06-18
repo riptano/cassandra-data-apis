@@ -6,19 +6,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/datastax/cassandra-data-apis/config"
-	"github.com/datastax/cassandra-data-apis/db"
-	"github.com/datastax/cassandra-data-apis/graphql"
-	. "github.com/datastax/cassandra-data-apis/internal/testutil"
-	"github.com/datastax/cassandra-data-apis/internal/testutil/schemas"
-	"github.com/datastax/cassandra-data-apis/internal/testutil/schemas/datatypes"
-	"github.com/datastax/cassandra-data-apis/internal/testutil/schemas/ddl"
-	"github.com/datastax/cassandra-data-apis/internal/testutil/schemas/killrvideo"
-	"github.com/datastax/cassandra-data-apis/internal/testutil/schemas/quirky"
-	"github.com/gocql/gocql"
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/gomega"
-	"gopkg.in/inf.v0"
 	"math"
 	"math/big"
 	"net/http"
@@ -28,6 +15,20 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/gocql/gocql"
+	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/gomega"
+	"github.com/riptano/cassandra-data-apis/config"
+	"github.com/riptano/cassandra-data-apis/db"
+	"github.com/riptano/cassandra-data-apis/graphql"
+	. "github.com/riptano/cassandra-data-apis/internal/testutil"
+	"github.com/riptano/cassandra-data-apis/internal/testutil/schemas"
+	"github.com/riptano/cassandra-data-apis/internal/testutil/schemas/datatypes"
+	"github.com/riptano/cassandra-data-apis/internal/testutil/schemas/ddl"
+	"github.com/riptano/cassandra-data-apis/internal/testutil/schemas/killrvideo"
+	"github.com/riptano/cassandra-data-apis/internal/testutil/schemas/quirky"
+	"gopkg.in/inf.v0"
 )
 
 var _ = Describe("DataEndpoint", func() {
@@ -978,7 +979,7 @@ func getSchemaRoutes(cfg *DataEndpointConfig) []graphql.Route {
 
 func getSchemaRoutesKeyspace(cfg *DataEndpointConfig, singleKeyspace string) []graphql.Route {
 	var endpoint = cfg.newEndpointWithDb(db.NewDbWithConnectedInstance(GetSession()))
-	routes, err := endpoint.RoutesSchemaManagementKeyspaceGraphQL("/graphql-schema", singleKeyspace,  config.AllSchemaOperations)
+	routes, err := endpoint.RoutesSchemaManagementKeyspaceGraphQL("/graphql-schema", singleKeyspace, config.AllSchemaOperations)
 	Expect(err).ToNot(HaveOccurred())
 	return routes
 }

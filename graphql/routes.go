@@ -5,15 +5,16 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/datastax/cassandra-data-apis/config"
-	"github.com/datastax/cassandra-data-apis/db"
-	"github.com/datastax/cassandra-data-apis/log"
-	"github.com/graphql-go/graphql"
 	"net/http"
 	"path"
 	"regexp"
 	"strings"
 	"time"
+
+	"github.com/graphql-go/graphql"
+	"github.com/riptano/cassandra-data-apis/config"
+	"github.com/riptano/cassandra-data-apis/db"
+	"github.com/riptano/cassandra-data-apis/log"
 )
 
 type executeQueryFunc func(query string, urlPath string, ctx context.Context) *graphql.Result

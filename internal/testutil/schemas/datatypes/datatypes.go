@@ -3,9 +3,10 @@ package datatypes
 import (
 	"bytes"
 	"fmt"
-	"github.com/datastax/cassandra-data-apis/graphql"
-	"github.com/datastax/cassandra-data-apis/internal/testutil/schemas"
+
 	. "github.com/onsi/gomega"
+	"github.com/riptano/cassandra-data-apis/graphql"
+	"github.com/riptano/cassandra-data-apis/internal/testutil/schemas"
 )
 
 type ConvertFn func(value interface{}) interface{}

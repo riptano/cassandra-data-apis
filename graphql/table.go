@@ -3,10 +3,11 @@ package graphql
 import (
 	"errors"
 	"fmt"
-	"github.com/datastax/cassandra-data-apis/db"
+
 	"github.com/gocql/gocql"
 	"github.com/graphql-go/graphql"
 	"github.com/mitchellh/mapstructure"
+	"github.com/riptano/cassandra-data-apis/db"
 )
 
 type dataTypeValue struct {

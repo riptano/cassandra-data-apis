@@ -1,10 +1,11 @@
 package config
 
 import (
-	"github.com/datastax/cassandra-data-apis/log"
+	"time"
+
+	"github.com/riptano/cassandra-data-apis/log"
 	"github.com/stretchr/testify/mock"
 	"go.uber.org/zap"
-	"time"
 )
 
 type ConfigMock struct {

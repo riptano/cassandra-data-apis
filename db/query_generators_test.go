@@ -1,13 +1,14 @@
 package db
 
 import (
-	"github.com/datastax/cassandra-data-apis/internal/testutil"
-	"github.com/datastax/cassandra-data-apis/types"
+	"testing"
+
 	"github.com/gocql/gocql"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+	"github.com/riptano/cassandra-data-apis/internal/testutil"
+	"github.com/riptano/cassandra-data-apis/types"
 	"github.com/stretchr/testify/mock"
-	"testing"
 )
 
 var _ = Describe("db", func() {

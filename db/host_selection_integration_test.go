@@ -3,9 +3,9 @@
 package db
 
 import (
-	"github.com/datastax/cassandra-data-apis/internal/testutil"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+	"github.com/riptano/cassandra-data-apis/internal/testutil"
 )
 
 var _ = Describe("NewDb()", func() {

@@ -4,21 +4,22 @@ import (
 	"encoding/csv"
 	"errors"
 	"fmt"
-	"github.com/datastax/cassandra-data-apis/config"
-	"github.com/datastax/cassandra-data-apis/db"
-	"github.com/datastax/cassandra-data-apis/endpoint"
-	"github.com/datastax/cassandra-data-apis/graphql"
-	"github.com/datastax/cassandra-data-apis/log"
-	"github.com/julienschmidt/httprouter"
-	"github.com/spf13/cobra"
-	"github.com/spf13/pflag"
-	"github.com/spf13/viper"
-	"go.uber.org/zap"
 	log2 "log"
 	"net/http"
 	"os"
 	"path"
 	"strings"
+
+	"github.com/julienschmidt/httprouter"
+	"github.com/riptano/cassandra-data-apis/config"
+	"github.com/riptano/cassandra-data-apis/db"
+	"github.com/riptano/cassandra-data-apis/endpoint"
+	"github.com/riptano/cassandra-data-apis/graphql"
+	"github.com/riptano/cassandra-data-apis/log"
+	"github.com/spf13/cobra"
+	"github.com/spf13/pflag"
+	"github.com/spf13/viper"
+	"go.uber.org/zap"
 )
 
 const defaultGraphQLPath = "/graphql"
@@ -236,7 +237,7 @@ func addGraphQLRoutes(router *httprouter.Router, endpoint *endpoint.DataEndpoint
 	}
 
 	if singleKeyspace != "" {
-		routes, err = endpoint.RoutesSchemaManagementKeyspaceGraphQL(viper.GetString("graphql-schema-path"), singleKeyspace,  ops)
+		routes, err = endpoint.RoutesSchemaManagementKeyspaceGraphQL(viper.GetString("graphql-schema-path"), singleKeyspace, ops)
 	} else {
 		routes, err = endpoint.RoutesSchemaManagementGraphQL(viper.GetString("graphql-schema-path"), ops)
 	}
